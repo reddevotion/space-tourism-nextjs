@@ -1,21 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply font-barlow text-[15px] md:text-[16px] lg:text-[18px] text-color-2 leading-[180%]
   }
 }
+.section__home {
+  @apply p-6 w-full flex items-center md:justify-between lg:items-end justify-start flex-col lg:flex-row lg:justify-end relative h-full  z-10 pt-[106px] md:pt-[224px] md:px-[40px] md:pb-[128px] lg:px-[165px] lg:pt-[264px];
+}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.section__destination {
+  @apply p-6 w-full flex flex-col relative h-full gap-6  z-10 pt-[106px] md:pt-[168px] md:px-[40px] md:pb-[40px] lg:pb-[48px]  xl:px-[165px] lg:pt-[176px];
+}
+
+.h1 {
+  @apply text-[80px] font-ballefair text-white md:text-[144px] leading-[1em];
+}
+
+.h2 {
+  @apply font-barlowcon text-[16px] tracking-[15%] md:text-[28px] md:tracking-[4px];
+}
+
+.sosal {
+  mask-image: linear-gradient(black 75%, transparent);
 }
